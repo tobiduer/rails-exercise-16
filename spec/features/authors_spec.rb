@@ -25,6 +25,14 @@ describe "Authors index page", :type => :feature do
 
   it "should link to link to author page" do
 	visit "/authors/"
-    expect(page).to have_link('Show')
+	my_link = find(:css, "a:contains('Show',"+author.id.to_s+")")
+	my_link.click
+    expect(page).to have_text(@author.name)
+  end
+
+
+  it "should link to link to author page" do
+	visit "/authors/"
+    expect(page).to have_link('Edit')
   end
 end
