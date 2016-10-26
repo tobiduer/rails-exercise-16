@@ -17,4 +17,9 @@ describe "Authors index page", :type => :feature do
     expect(page).to have_text(@author.name)
     expect(page).to have_text(@author.homepage)
   end
+
+  it "should link to the new author page" do
+	visit "/authors/"
+    expect(page).to have_link('Add author')
+  end
 end
