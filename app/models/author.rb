@@ -1,5 +1,2 @@
-class Author < ActiveRecord::Base 
-	validates :first_name, presence: true
-	validates :last_name, presence: true
-	validates :homepage, presence: true
+class Author < ActiveRecord::Base
 end
