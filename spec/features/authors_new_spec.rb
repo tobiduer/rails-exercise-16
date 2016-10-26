@@ -12,4 +12,8 @@ describe "Authors new page", :type => :feature do
     expect(page).to have_field("Last name")
   end
 
+  it "should have the field 'homepage'" do
+	visit "/authors/new"
+    expect(page).to have_field("Homepage")
+  end
 end
