@@ -22,4 +22,9 @@ describe "Authors index page", :type => :feature do
 	visit "/authors/"
     expect(page).to have_link('Add author')
   end
+
+  it "should link to link to author page" do
+	visit "/authors/"
+    expect(page).to have_link('Show')
+  end
 end
